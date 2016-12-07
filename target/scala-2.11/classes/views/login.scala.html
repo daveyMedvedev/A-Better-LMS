@@ -1,0 +1,41 @@
+@(message: String)
+
+@main("A Better LMS") {
+
+<Body>
+    <div id="bg" class="bg"/>
+
+        <div class="col-md-6 col-md-offset-3">
+            <div class="container">
+                <div class="row">
+
+                    <img class="img" src="http://i.imgur.com/yZoZ2Dp.png" style="width: 50%; height: 50%">
+
+                </div>
+            </div>
+            <hr>
+        </div>
+
+
+
+        <div class="container">
+            <form autocomplete="off" role="form" class="form-signin" method="post" action="@routes.LoginController.login">
+                <h1 class="form-signin-heading text-muted">LOGIN</h1>
+
+                <input type="text" class="form-control" placeholder="Username" required="" name="username" autofocus>
+                <input type="password" class="form-control" placeholder="Password" required="" name="password" autofocus>
+
+                <div class="col-md-8 col-md-offset-2">
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                    </button>
+
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</Body>
+}
