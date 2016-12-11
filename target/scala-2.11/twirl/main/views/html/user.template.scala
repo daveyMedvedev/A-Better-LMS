@@ -78,6 +78,13 @@ Seq[Any](format.raw/*1.19*/("""
                 <li>
                     <a ng-click = "get_posts()" onclick="toggle('showposts');"><span class="glyphicon glyphicon-search"></span> Show All Posts</a>
                 </li>
+                <li>
+                    <a ng-click = "get_users()" onclick="toggle('updateusers');"><span class="glyphicon glyphicon-search"></span> Update A User</a>
+                </li>
+                <li>
+                    <a ng-click = "get_posts()" onclick="toggle('updateposts');"><span class="glyphicon glyphicon-search"></span> Update A Post</a>
+                </li>
+
 
             </ul>
         </div>
@@ -87,7 +94,7 @@ Seq[Any](format.raw/*1.19*/("""
     <div class="container">
         <div class="row">
                 <div style="display:none" class="col-md-10" Id="post">
-                    <form autocomplete="off" role="form" class="form-signin" method="post" action=""""),_display_(/*59.101*/routes/*59.107*/.PostController.savePost),format.raw/*59.131*/("""">
+                    <form autocomplete="off" role="form" class="form-signin" method="post" action=""""),_display_(/*66.101*/routes/*66.107*/.PostController.savePost),format.raw/*66.131*/("""">
                         <h1 class="form-signin-heading text-muted">Make a New Post</h1>
 
                         <input type="text" class="form-control" placeholder="Title" required="" name="title" autofocus>
@@ -101,7 +108,7 @@ Seq[Any](format.raw/*1.19*/("""
                 </div>
 
                 <div style="display:none" class="col-md-10" id="adduser">
-                    <form autocomplete="off" role="form" class="form-signin" method="post" action=""""),_display_(/*73.101*/routes/*73.107*/.UserController.saveUser),format.raw/*73.131*/("""">
+                    <form autocomplete="off" role="form" class="form-signin" method="post" action=""""),_display_(/*80.101*/routes/*80.107*/.UserController.saveUser),format.raw/*80.131*/("""">
                         <h1 class="form-signin-heading text-muted">New User</h1>
 
                         <input type="text" class="form-control" placeholder="First Name" required="" name="fname" autofocus>
@@ -119,7 +126,7 @@ Seq[Any](format.raw/*1.19*/("""
 
                 <div style="display:none" class="col-md-10" id="showusers">
 
-                    <form autocomplete="off" role="form" class="form-signin" method="post" action=""""),_display_(/*91.101*/routes/*91.107*/.UserController.deleteUser),format.raw/*91.133*/("""">
+                    <form autocomplete="off" role="form" class="form-signin" method="post" action=""""),_display_(/*98.101*/routes/*98.107*/.UserController.deleteUser),format.raw/*98.133*/("""">
                         <h1 class="form-signin-heading text-muted">Show All Users</h1>
 
                         <table class="table table-bordered" id="userTable">
@@ -137,17 +144,16 @@ Seq[Any](format.raw/*1.19*/("""
                             <tbody>
                             <tr id="users" ng-repeat="x in dbUsers track by $index" class="clickable-row">
 
-                                <td>"""),format.raw/*109.37*/("""{"""),format.raw/*109.38*/("""{"""),format.raw/*109.39*/(""" """),format.raw/*109.40*/("""x.firstName """),format.raw/*109.52*/("""}"""),format.raw/*109.53*/("""}"""),format.raw/*109.54*/("""</td>
-                                <td>"""),format.raw/*110.37*/("""{"""),format.raw/*110.38*/("""{"""),format.raw/*110.39*/(""" """),format.raw/*110.40*/("""x.lastName """),format.raw/*110.51*/("""}"""),format.raw/*110.52*/("""}"""),format.raw/*110.53*/("""</td>
-                                <td>"""),format.raw/*111.37*/("""{"""),format.raw/*111.38*/("""{"""),format.raw/*111.39*/(""" """),format.raw/*111.40*/("""x.username """),format.raw/*111.51*/("""}"""),format.raw/*111.52*/("""}"""),format.raw/*111.53*/("""</td>
-                                <td>"""),format.raw/*112.37*/("""{"""),format.raw/*112.38*/("""{"""),format.raw/*112.39*/(""" """),format.raw/*112.40*/("""x.email """),format.raw/*112.48*/("""}"""),format.raw/*112.49*/("""}"""),format.raw/*112.50*/("""</td>
-                                <td>"""),format.raw/*113.37*/("""{"""),format.raw/*113.38*/("""{"""),format.raw/*113.39*/(""" """),format.raw/*113.40*/("""x.id """),format.raw/*113.45*/("""}"""),format.raw/*113.46*/("""}"""),format.raw/*113.47*/("""</td>
+                                <td>"""),format.raw/*116.37*/("""{"""),format.raw/*116.38*/("""{"""),format.raw/*116.39*/(""" """),format.raw/*116.40*/("""x.firstName """),format.raw/*116.52*/("""}"""),format.raw/*116.53*/("""}"""),format.raw/*116.54*/("""</td>
+                                <td>"""),format.raw/*117.37*/("""{"""),format.raw/*117.38*/("""{"""),format.raw/*117.39*/(""" """),format.raw/*117.40*/("""x.lastName """),format.raw/*117.51*/("""}"""),format.raw/*117.52*/("""}"""),format.raw/*117.53*/("""</td>
+                                <td>"""),format.raw/*118.37*/("""{"""),format.raw/*118.38*/("""{"""),format.raw/*118.39*/(""" """),format.raw/*118.40*/("""x.username """),format.raw/*118.51*/("""}"""),format.raw/*118.52*/("""}"""),format.raw/*118.53*/("""</td>
+                                <td>"""),format.raw/*119.37*/("""{"""),format.raw/*119.38*/("""{"""),format.raw/*119.39*/(""" """),format.raw/*119.40*/("""x.email """),format.raw/*119.48*/("""}"""),format.raw/*119.49*/("""}"""),format.raw/*119.50*/("""</td>
+                                <td>"""),format.raw/*120.37*/("""{"""),format.raw/*120.38*/("""{"""),format.raw/*120.39*/(""" """),format.raw/*120.40*/("""x.id """),format.raw/*120.45*/("""}"""),format.raw/*120.46*/("""}"""),format.raw/*120.47*/("""</td>
 
                                 <td class="text-xs-center">
                                     <button class="btn btn-danger-outline" ng-click="delete_users(x)">Delete User</button>
                                 </td>
 
-                                </td>
                             </tr>
                             </tbody>
                         </table>
@@ -155,9 +161,42 @@ Seq[Any](format.raw/*1.19*/("""
                     </form>
                 </div>
 
+            <div style="display:none" class="col-md-10" id="updateusers">
+                <form autocomplete="off" role="form" class="form-signin" method="post" ng-repeat="x in dbUsers track by $index" action=""""),_display_(/*134.138*/routes/*134.144*/.UserController.saveUser),format.raw/*134.168*/("""">
+                    <h1 class="form-signin-heading text-muted">New User</h1>
+
+                    <input type="text" class="form-control" placeholder="First Name" required="" ng-model="x.firstName" name="fname" autofocus>
+                    <input type="text" class="form-control" placeholder="Last Name" required="" ng-model="x.lastName" name="lname" autofocus>
+                    <input type="text" class="form-control" placeholder="Username" required="" ng-model="x.username" name="username" autofocus>
+                    <input type="password" class="form-control" placeholder="Password" required="" ng-model="x.password" name="password" autofocus>
+                    <input type="text" class="form-control" placeholder="Email" required="" ng-model="x.email" name="email" autofocus>
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+
+                </form>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div style="display:none" class="col-md-10" Id="updateposts">
+                        <form autocomplete="off" role="form" class="form-signin" ng-repeat="x in dbPosts track by $index" method="post" action=""""),_display_(/*153.146*/routes/*153.152*/.PostController.savePost),format.raw/*153.176*/("""">
+                            <h1 class="form-signin-heading text-muted">Update a Post</h1>
+
+                            <input type="text" class="form-control" placeholder="Title" ng-model="x.title" required="" name="title" autofocus>
+                            <input type="text" class="form-control" placeholder="Content" ng-model="x.content" required="" name="content" autofocus>
+                            <input type="text" class="form-control" placeholder="Section" ng-model="x.section" equired="" name="sectionId" autofocus>
+
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </form>
+                    </div>
+
             <div style="display:none" class="col-md-10" id="showposts">
 
-                <form autocomplete="off" role="form" class="form-signin" method="post" action=""""),_display_(/*129.97*/routes/*129.103*/.PostController.deletePost),format.raw/*129.129*/("""">
+                <form autocomplete="off" role="form" class="form-signin" method="post" action=""""),_display_(/*168.97*/routes/*168.103*/.PostController.deletePost),format.raw/*168.129*/("""">
                     <h1 class="form-signin-heading text-muted">Show All Posts</h1>
 
                     <table class="table table-bordered" id="postTable">
@@ -174,9 +213,9 @@ Seq[Any](format.raw/*1.19*/("""
                         <tbody>
                         <tr id="posts" ng-repeat="x in dbPosts track by $index" class="clickable-row">
 
-                            <td>"""),format.raw/*146.33*/("""{"""),format.raw/*146.34*/("""{"""),format.raw/*146.35*/(""" """),format.raw/*146.36*/("""x.title """),format.raw/*146.44*/("""}"""),format.raw/*146.45*/("""}"""),format.raw/*146.46*/("""</td>
-                            <td>"""),format.raw/*147.33*/("""{"""),format.raw/*147.34*/("""{"""),format.raw/*147.35*/(""" """),format.raw/*147.36*/("""x.content """),format.raw/*147.46*/("""}"""),format.raw/*147.47*/("""}"""),format.raw/*147.48*/("""</td>
-                            <td>"""),format.raw/*148.33*/("""{"""),format.raw/*148.34*/("""{"""),format.raw/*148.35*/(""" """),format.raw/*148.36*/("""x.id """),format.raw/*148.41*/("""}"""),format.raw/*148.42*/("""}"""),format.raw/*148.43*/("""</td>
+                            <td>"""),format.raw/*185.33*/("""{"""),format.raw/*185.34*/("""{"""),format.raw/*185.35*/(""" """),format.raw/*185.36*/("""x.title """),format.raw/*185.44*/("""}"""),format.raw/*185.45*/("""}"""),format.raw/*185.46*/("""</td>
+                            <td>"""),format.raw/*186.33*/("""{"""),format.raw/*186.34*/("""{"""),format.raw/*186.35*/(""" """),format.raw/*186.36*/("""x.content """),format.raw/*186.46*/("""}"""),format.raw/*186.47*/("""}"""),format.raw/*186.48*/("""</td>
+                            <td>"""),format.raw/*187.33*/("""{"""),format.raw/*187.34*/("""{"""),format.raw/*187.35*/(""" """),format.raw/*187.36*/("""x.id """),format.raw/*187.41*/("""}"""),format.raw/*187.42*/("""}"""),format.raw/*187.43*/("""</td>
 
                             <td class="text-xs-center">
                                 <button class="btn btn-danger-outline" ng-click="delete_posts(x)">Delete Post</button>
@@ -219,11 +258,11 @@ Seq[Any](format.raw/*1.19*/("""
 object user extends user_Scope0.user
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 07 07:33:37 EST 2016
+                  DATE: Sat Dec 10 22:13:14 EST 2016
                   SOURCE: /Users/davemedvedev/Desktop/testdemo/app/views/user.scala.html
-                  HASH: d4c64bf389cafeba190af63cb08c7f65c0417050
-                  MATRIX: 743->1|855->18|883->21|911->41|950->43|977->44|1917->957|1937->968|1980->990|3233->2215|3249->2221|3295->2245|4209->3131|4225->3137|4271->3161|5437->4299|5453->4305|5501->4331|6341->5142|6371->5143|6401->5144|6431->5145|6472->5157|6502->5158|6532->5159|6603->5201|6633->5202|6663->5203|6693->5204|6733->5215|6763->5216|6793->5217|6864->5259|6894->5260|6924->5261|6954->5262|6994->5273|7024->5274|7054->5275|7125->5317|7155->5318|7185->5319|7215->5320|7252->5328|7282->5329|7312->5330|7383->5372|7413->5373|7443->5374|7473->5375|7507->5380|7537->5381|7567->5382|8188->5975|8205->5981|8254->6007|8952->6676|8982->6677|9012->6678|9042->6679|9079->6687|9109->6688|9139->6689|9206->6727|9236->6728|9266->6729|9296->6730|9335->6740|9365->6741|9395->6742|9462->6780|9492->6781|9522->6782|9552->6783|9586->6788|9616->6789|9646->6790
-                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|61->30|61->30|61->30|90->59|90->59|90->59|104->73|104->73|104->73|122->91|122->91|122->91|140->109|140->109|140->109|140->109|140->109|140->109|140->109|141->110|141->110|141->110|141->110|141->110|141->110|141->110|142->111|142->111|142->111|142->111|142->111|142->111|142->111|143->112|143->112|143->112|143->112|143->112|143->112|143->112|144->113|144->113|144->113|144->113|144->113|144->113|144->113|160->129|160->129|160->129|177->146|177->146|177->146|177->146|177->146|177->146|177->146|178->147|178->147|178->147|178->147|178->147|178->147|178->147|179->148|179->148|179->148|179->148|179->148|179->148|179->148
+                  HASH: 3ddb7a3d08209711abdcf6979c25efdcaf675acc
+                  MATRIX: 743->1|855->18|883->21|911->41|950->43|977->44|1917->957|1937->968|1980->990|3616->2598|3632->2604|3678->2628|4592->3514|4608->3520|4654->3544|5820->4682|5836->4688|5884->4714|6724->5525|6754->5526|6784->5527|6814->5528|6855->5540|6885->5541|6915->5542|6986->5584|7016->5585|7046->5586|7076->5587|7116->5598|7146->5599|7176->5600|7247->5642|7277->5643|7307->5644|7337->5645|7377->5656|7407->5657|7437->5658|7508->5700|7538->5701|7568->5702|7598->5703|7635->5711|7665->5712|7695->5713|7766->5755|7796->5756|7826->5757|7856->5758|7890->5763|7920->5764|7950->5765|8576->6362|8593->6368|8640->6392|9991->7714|10008->7720|10055->7744|11058->8719|11075->8725|11124->8751|11822->9420|11852->9421|11882->9422|11912->9423|11949->9431|11979->9432|12009->9433|12076->9471|12106->9472|12136->9473|12166->9474|12205->9484|12235->9485|12265->9486|12332->9524|12362->9525|12392->9526|12422->9527|12456->9532|12486->9533|12516->9534
+                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|61->30|61->30|61->30|97->66|97->66|97->66|111->80|111->80|111->80|129->98|129->98|129->98|147->116|147->116|147->116|147->116|147->116|147->116|147->116|148->117|148->117|148->117|148->117|148->117|148->117|148->117|149->118|149->118|149->118|149->118|149->118|149->118|149->118|150->119|150->119|150->119|150->119|150->119|150->119|150->119|151->120|151->120|151->120|151->120|151->120|151->120|151->120|165->134|165->134|165->134|184->153|184->153|184->153|199->168|199->168|199->168|216->185|216->185|216->185|216->185|216->185|216->185|216->185|217->186|217->186|217->186|217->186|217->186|217->186|217->186|218->187|218->187|218->187|218->187|218->187|218->187|218->187
                   -- GENERATED --
               */
           

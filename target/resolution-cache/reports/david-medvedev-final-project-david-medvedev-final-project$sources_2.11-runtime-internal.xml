@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161206191258"/>
+		date="20161210211303"/>
 	<dependencies>
 		<module organisation="com.google.code.gson" name="gson">
 			<revision name="2.4" status="release" pubdate="20151003204730" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/google/gson" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="100">
@@ -51,7 +51,7 @@
 				<metadata-artifact status="no" details="" size="3217" time="0" location="/Users/davemedvedev/.ivy2/cache/com.typesafe.play/filters-helpers_2.11/ivy-2.5.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/filters-helpers_2.11/2.5.8/filters-helpers_2.11-2.5.8.pom"/>
 				<caller organisation="david-medvedev-final-project" name="david-medvedev-final-project$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.8" rev-constraint-default="2.5.8" rev-constraint-dynamic="2.5.8" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="filters-helpers_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="38252" time="236" location="/Users/davemedvedev/.ivy2/cache/com.typesafe.play/filters-helpers_2.11/srcs/filters-helpers_2.11-2.5.8-sources.jar">
+					<artifact name="filters-helpers_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="38252" time="0" location="/Users/davemedvedev/.ivy2/cache/com.typesafe.play/filters-helpers_2.11/srcs/filters-helpers_2.11-2.5.8-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/filters-helpers_2.11/2.5.8/filters-helpers_2.11-2.5.8-sources.jar"/>
 					</artifact>
 				</artifacts>

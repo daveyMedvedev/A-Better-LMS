@@ -1,6 +1,9 @@
 if (window.console) {
   console.log("Welcome to your Play application's JavaScript!");
 }
+
+
+
  var on = 0;
 
 function toggle(divId) {
@@ -58,7 +61,38 @@ function lmsController($scope, $http) {
             		});
 
             	}
+/*
+   $scope.edit_users = function(x) {
+               		console.log(x.id);
 
+               		$http({
+               			method: "POST",
+               			url: "/editUser",
+               			headers: {
+               				'Content-Type': 'application/x-www-form-urlencoded'
+               			},
+               			transformRequest: function(obj) {
+               				var str = [];
+               				for (var p in obj)
+               				str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+               				return str.join("&");
+               			},
+               			data: {
+               			    firstName: x.firstName,
+               			    lastName: x.lastName,
+               			    email: x.email,
+               			    username: x.username,
+               				userId: x.id
+               			}
+               		}).success(function(response,data) {
+               			console.log(response,data);
+               			$("#userTable tr").remove();
+
+               		});
+
+               	}
+
+*/
  $scope.delete_posts = function(x) {
             		console.log(x.id);
 

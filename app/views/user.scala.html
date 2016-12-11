@@ -47,6 +47,13 @@
                 <li>
                     <a ng-click = "get_posts()" onclick="toggle('showposts');"><span class="glyphicon glyphicon-search"></span> Show All Posts</a>
                 </li>
+                <li>
+                    <a ng-click = "get_users()" onclick="toggle('updateusers');"><span class="glyphicon glyphicon-search"></span> Update A User</a>
+                </li>
+                <li>
+                    <a ng-click = "get_posts()" onclick="toggle('updateposts');"><span class="glyphicon glyphicon-search"></span> Update A Post</a>
+                </li>
+
 
             </ul>
         </div>
@@ -116,13 +123,45 @@
                                     <button class="btn btn-danger-outline" ng-click="delete_users(x)">Delete User</button>
                                 </td>
 
-                                </td>
                             </tr>
                             </tbody>
                         </table>
 
                     </form>
                 </div>
+
+            <div style="display:none" class="col-md-10" id="updateusers">
+                <form autocomplete="off" role="form" class="form-signin" method="post" ng-repeat="x in dbUsers track by $index" action="@routes.UserController.saveUser">
+                    <h1 class="form-signin-heading text-muted">New User</h1>
+
+                    <input type="text" class="form-control" placeholder="First Name" required="" ng-model="x.firstName" name="fname" autofocus>
+                    <input type="text" class="form-control" placeholder="Last Name" required="" ng-model="x.lastName" name="lname" autofocus>
+                    <input type="text" class="form-control" placeholder="Username" required="" ng-model="x.username" name="username" autofocus>
+                    <input type="password" class="form-control" placeholder="Password" required="" ng-model="x.password" name="password" autofocus>
+                    <input type="text" class="form-control" placeholder="Email" required="" ng-model="x.email" name="email" autofocus>
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+
+                </form>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div style="display:none" class="col-md-10" Id="updateposts">
+                        <form autocomplete="off" role="form" class="form-signin" ng-repeat="x in dbPosts track by $index" method="post" action="@routes.PostController.savePost">
+                            <h1 class="form-signin-heading text-muted">Update a Post</h1>
+
+                            <input type="text" class="form-control" placeholder="Title" ng-model="x.title" required="" name="title" autofocus>
+                            <input type="text" class="form-control" placeholder="Content" ng-model="x.content" required="" name="content" autofocus>
+                            <input type="text" class="form-control" placeholder="Section" ng-model="x.section" equired="" name="sectionId" autofocus>
+
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </form>
+                    </div>
 
             <div style="display:none" class="col-md-10" id="showposts">
 

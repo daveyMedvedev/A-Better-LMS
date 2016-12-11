@@ -4,7 +4,7 @@
 		module="david-medvedev-final-project$sources_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20161206191258"
+		publication="20161210211303"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

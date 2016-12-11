@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for david-medvedev-final-project#david-medvedev-final-project_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies david-medvedev-final-project#david-medvedev-final-project_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1c1856b9[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@589f15db[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -8198,7 +8198,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2217ms :: artifacts dl 57ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1907ms :: artifacts dl 52ms[0m
 [0m[[0mdebug[0m] [0m	report for david-medvedev-final-project#david-medvedev-final-project_2.11;1.0-SNAPSHOT compile produced in /Users/davemedvedev/Desktop/testdemo/target/resolution-cache/reports/david-medvedev-final-project-david-medvedev-final-project_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for david-medvedev-final-project#david-medvedev-final-project_2.11;1.0-SNAPSHOT runtime produced in /Users/davemedvedev/Desktop/testdemo/target/resolution-cache/reports/david-medvedev-final-project-david-medvedev-final-project_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for david-medvedev-final-project#david-medvedev-final-project_2.11;1.0-SNAPSHOT test produced in /Users/davemedvedev/Desktop/testdemo/target/resolution-cache/reports/david-medvedev-final-project-david-medvedev-final-project_2.11-test.xml[0m
@@ -8212,5 +8212,5 @@
 [0m[[0mdebug[0m] [0m	report for david-medvedev-final-project#david-medvedev-final-project_2.11;1.0-SNAPSHOT docs produced in /Users/davemedvedev/Desktop/testdemo/target/resolution-cache/reports/david-medvedev-final-project-david-medvedev-final-project_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for david-medvedev-final-project#david-medvedev-final-project_2.11;1.0-SNAPSHOT pom produced in /Users/davemedvedev/Desktop/testdemo/target/resolution-cache/reports/david-medvedev-final-project-david-medvedev-final-project_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for david-medvedev-final-project#david-medvedev-final-project_2.11;1.0-SNAPSHOT scala-tool produced in /Users/davemedvedev/Desktop/testdemo/target/resolution-cache/reports/david-medvedev-final-project-david-medvedev-final-project_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2217ms resolve - 57ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (1907ms resolve - 52ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
